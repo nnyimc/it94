@@ -1,0 +1,971 @@
+html, body {
+	font-family: "Open Sans", Helvetica, serif;
+	box-sizing: border-box;6
+	margin: 0;
+	border: 0;
+	padding-top: 3%;
+	overflow-x: hidden;
+}
+
+/* Styles des liens */
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	text-decoration: none;
+	color : grey;
+}
+
+a:hover {
+     text-decoration: none;
+	 color: rgb(67,138,45);
+}
+
+a:active {
+	text-decoration: none;
+	color: black;
+}
+
+/* Bandeau - logo - contact */
+#header {
+	position: fixed;
+	width: 100%;
+	background-color: white;
+	top: 0;
+	left: 0;
+	z-index:1;
+}
+
+
+#bandeau a {
+	padding-left: 45%;
+}
+
+#logo {
+	display: inline;
+	padding-top: .5%;
+	height: 4em;
+	width: 10em;
+}
+
+.contactBandeau {
+	border: 1pt solid rgb(67,138,45);
+	border-radius: 12px;
+	background-color: white;
+    color: rgb(67,138,45);
+    float: right;
+	margin: 2em 3%;
+	height: 2em;
+	text-align: center;
+	display: none;
+}
+
+.contactBandeau:hover{
+	color: white;
+    background-color: rgb(67,138,45);
+	display: none;
+}
+
+#main {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+/* Flex qui permettent à l'image de s'aligner sur le bas de la div */
+#couverture {
+   padding-top: 2em;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-justify-content: flex-end;
+			-ms-flex-pack: end;
+		  justify-content: flex-end;
+   -webkit-flex-direction: column;
+	  -ms-flex-direction: column;
+		  flex-direction: column; 	 
+}
+
+
+/* Menu et Rubriques */
+#menu {
+	color: black;
+	width: 100%;
+	display: flex;
+ }
+
+#menu h1 {
+    text-align: center;
+}
+
+#menu h2 {
+	color: rgb(67,138,45);
+}
+
+.rubs {
+	width: 28%;
+	text-align: center;
+	flex: 1 1 auto;
+}
+
+.rubs:nth-child(2){
+	border-left: 1pt solid rgb(67,138,45);
+	border-right: 1pt solid rgb(67,138,45);
+}
+
+
+.items ul {
+	padding-bottom:  4%;
+}
+
+.items { 
+	color: black;
+	text-align: left;
+	list-style-type: none;
+	padding:0 2.5% 0 2.5%;
+	line-height: 1.65em;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li:before {
+	content: "•";
+	padding: 0 0.5em;
+	color: rgb(67,138,45);
+}
+
+.sousitems li:before {
+	content: "•";
+	padding: 0 0.5em;
+	color: rgb(50,113,169);
+}
+
+/*indispensable pour que la div menu, contact et formulaire s'étendent jusqu'à cet élément*/
+#container1, #container2, #container3 {
+	clear: both;
+}
+
+
+
+#container2 a:link{
+	text-decoration: none;
+	color: lavender;
+}
+
+#container2 a:hover{
+	color: orange;
+}
+
+/*Contact*/
+div#contact{
+	width: 100%;
+	background-color: rgb(67,138,45);
+	display: none;
+}
+
+h2 {
+	line-height: 1em;
+}
+
+.siege, .coordonnees { 
+	padding: 1%;
+	color: white;
+	text-align: left;
+	line-height: 0.5em;
+	width: 28%;
+	float: left;
+	background-color: rgb(67,138,45);
+    display: inline-block;	
+}
+
+.mentions { 
+	padding: 1% .5%;
+	color: white;
+	text-align: left;
+	line-height: 0.5em;
+	width: 25%;
+	float: left;
+	background-color: rgb(67,138,45);
+    display: inline-block;	
+}
+
+.boutonContact {
+	display: none;
+}
+
+.mentions a {
+	color: white;
+}
+
+.mentions a:hover{
+	font-weight: 600;
+}
+
+
+#ancreContact{
+	display: none;
+	margin-top: 0.85em;
+	position: relative;
+	bottom: 0.130em;
+	background-color: rgb(67,138,45);
+	font-size: 1.1em;
+	font-weight: 600;
+	color: white;
+	border: 1pt solid white;
+	border-radius: 24px;
+	padding: 4%;
+}
+
+
+#ancreContact:hover {
+	background-color: white;
+	color: rgb(67,138,45);
+}
+
+
+/*Formulaire*/
+#formuTitre {
+    color: purple;
+    font-weight: bolder;	
+	font-size: 1.5em;
+	text-align: center;
+	padding: 0.25%;
+}
+
+#formulaire {
+	display: none;
+	background-color: lavender;
+	width: 100%;
+	padding-top: 1.25%;
+}
+
+form {
+	padding: 2% 5%;
+	width: 90%;
+}
+
+#formulaire input, #formulaire textarea {
+    border: 1pt solid rgb(67,138,45);
+	border-radius: 4px;	
+}
+
+#formuIdentite, #formuCoordonnees, #formuMessage, #formuSubmit {
+	padding: 0 7.3% 0 7.3%;
+}
+
+
+#formuIdentite label, #formuCoordonnees label, #formuMessage label {
+	color: white;
+	background-color: rgb(67,138,45);
+	display: inline-block;
+	text-align: center;
+	width: 30%;
+	padding: .6% 0;
+	margin: .25% 1% 1% 0;
+	border-radius: 4px;	
+	float: left;
+	clear: left;
+}
+
+
+#formuIdentite input, #formuCoordonnees input, #formuMessage textarea {
+	display: inline-block;
+	float: right;
+	width: 60%;
+}
+
+#formulaire input {
+	color: black;
+	background-color: white;
+	padding: .5% 2%;
+	position: relative;
+	top: 0.5em;
+}
+
+#formulaire textarea {
+	color: black;
+	background-color: white;
+	padding: 1% 2%;
+}
+
+#formuIdentite, #formuCoordonnees, #formuMessage {
+	margin: 2% 0;
+}
+
+#formuSubmit input {
+	color: white;
+	background-color: rgb(67,138,45);
+	border-radius: 24px;
+	text-align: center;
+	display: inline-block;
+	width: 65%;
+	margin: 4% 17.5%;
+	border: 1pt solid white;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#formuSubmit input:hover {
+	background-color: white;
+	color: rgb(67,138,45);
+	border-radius: 24px;
+}
+
+#fermeture {
+	display: inline-block;
+	margin: 2% 1% 1% 1%;
+	font-size: 1.15em;
+	font-weight: bolder;
+	text-align: center;
+	padding : 0.25% 0.5%;
+    float: right;
+	color: white;
+	background-color: red;
+	border: 1pt solid white;
+	border-radius: 4px;
+}
+
+
+#fermeture:hover {
+	background-color: white;
+	color: red;
+}
+
+#fermeture2 {
+	display: inline-block;
+	margin: 1%;
+	font-size: 1.15em;
+	font-weight: bolder;
+	text-align: center;
+	padding : 0.25% 0.5%;
+    float: right;
+	color: white;
+	background-color: red;
+	border: 1pt solid white;
+	border-radius: 4px;
+	position: relative;
+	bottom: 3em;
+}
+
+
+#fermeture2:hover {
+	background-color: white;
+	color: red;
+}
+
+/*Formulaire erreurs*/
+span[id^="errdiv_"]{
+	font-weight: bold; 
+	color: purple; 
+	font-size: 1.2em; 
+	display: none;
+	margin-left: 5%;
+}
+
+/*Résumé*/
+#resume {
+	background-color: lavender;
+	font-weight: bolder;
+	width: 50%;
+	padding: 15% 25%;
+}
+
+
+/* MEDIA QUERIES*/
+
+@media screen and (min-width: 0px) and (max-width: 319px) {
+	
+/*Bandeau*/
+
+#header{
+	height: 6em;
+}
+
+#logo {
+	display: none;
+}
+
+#couverture img {
+    display: none;
+}
+
+#couverture {
+    height: 4em;	
+}
+
+.contactBandeau {
+	border: 1pt solid rgb(67,138,45);
+	border-radius: 24px;
+	background-color: rgb(67,138,45);
+    color: white;
+	margin: 1% 25%;
+	width: 50%;
+	text-align: center;
+	font-size: 1em;
+}
+
+.contactBandeau:hover{
+	color: rgb(67,138,45);
+    background-color: white;
+}
+
+/* Menu et Rubriques */
+#menu {
+	color: black;
+	width: 100%;
+	display: inline;
+}
+
+#menu h1 {
+    text-align: center;
+}
+
+.rubs {
+	text-align: center;
+	width: 100%;
+    border-top: 1pt solid rgb(67,138,45);
+}
+
+.rubs:nth-child(2) {
+    border-left: none;
+    border-right: none;
+}
+
+
+.items ul {
+	padding-bottom:  4%;
+}
+
+.items { 
+	color: black;
+	text-align: left;
+	list-style-type: none;
+	padding: 0 0 0 3%;
+	line-height: 1.60em;
+}
+
+.items li {
+	padding: 0 0 1% 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li:before {
+	content: "•";
+	padding: 0 0.5em;
+	color: rgb(67,138,45);
+}
+
+.sousitems li:before {
+	content: "•";
+	padding: 0 0.5em;
+	color: rgb(50,113,169);
+}
+
+/*Contact */
+.siege, .coordonnees, .mentions {
+	background-color: white;
+	color: rgb(67,138,45);
+	text-align: center;
+	width: 100%;
+    border-top: 1pt solid black;
+	height: auto;
+	padding: 4%;
+}
+
+.mentions a {
+	color: rgb(67,138,45);
+}
+
+.mentions a:hover{
+	font-weight: bolder;
+}
+.boutonContact { 
+    display: none;	
+}
+
+/*Formulaire*/
+#formuTitre {
+	font-size: 0.89em;
+	color: purple;
+	font-weight: bolder;
+	margin: 10% 0 5% 0;
+}
+
+#formuContact{
+	padding: 3%;
+	width: 92%;
+}
+
+#formuIdentite label, #formuCoordonnees label, #formuMessage label {
+	color: white;
+	background-color: rgb(67,138,45);
+	display: inline-block;
+	text-align: center;
+	width: 37%;
+	padding: 1.25%;
+	border-radius: 4px;	
+	float: left;
+	clear: left;
+	position: relative;
+	top: 0.5em;
+}
+
+
+#formuIdentite input, #formuCoordonnees input, #formuMessage textarea {
+	display: inline-block;
+	float: right;
+	width: 51%;
+}
+
+#formulaire input, #formulaire textarea {
+	color: black;
+	background-color: white;
+	padding: 2%;
+	margin:  0 .75%;
+}
+
+#formulaire textarea {
+	position: relative;
+	top: 1em;
+	margin-bottom: 1em;
+}
+
+#formuSubmit input {
+	color: white;
+	background-color: rgb(67,138,45);
+	border-radius: 24px;
+	text-align: center;
+	display: inline-block;
+	width: 65%;
+	margin: 4% 17.5%;
+	border: 1pt solid white;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#formuSubmit input:hover {
+	background-color: white;
+	color: rgb(67,138,45);
+	border-radius: 24px;
+}
+
+#formuIdentite, #formuCoordonnees, #formuMessage, #formuSubmit {
+	padding: 0 5% 0 5%;
+}
+
+a:hover {
+color: rgb(67,138,45);
+}
+
+
+/*Formulaire erreurs*/
+span[id^="errdiv_"] {
+	font-weight: bold; 
+	color: purple; 
+	font-size: .85em; 
+	text-align: center;
+	}
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 540px) {
+/*Bandeau*/
+#header {
+	padding: 0 25%;
+	height: 8%;
+}
+
+#logo {
+	display: none;
+}
+
+.contactBandeau {
+	border: 1pt solid rgb(67,138,45);
+	border-radius: 24px;
+	background-color: rgb(67,138,45);
+    color: white;
+	width: 50%;
+	text-align: center;
+	font-size: 1em;
+	float: none;
+	position: relative;
+	bottom: 1.15em;
+}
+
+.contactBandeau:hover{
+	color: rgb(67,138,45);
+    background-color: white;
+}
+
+#couverture{
+	padding-top: 4em;
+}
+
+/* Menu et Rubriques */
+#menu {
+	color: black;
+	display: inline;
+	width: 100%;
+}
+
+#menu h1 {
+    text-align: center;
+}
+
+.rubs {
+	text-align: center;
+	width: 100%;
+}
+
+
+.rubs:nth-child(2){
+	border-top: 1pt solid rgb(67,138,45); 
+	border-bottom: 1pt solid rgb(67,138,45);
+	border-left: none;
+	border-right: none;
+}
+
+.items ul {
+	padding-bottom: 5%;
+}
+
+.items { 
+	color: black;
+	text-align: left;
+	list-style-type: none;
+	padding: 0 4% 2% 4%;
+	line-height: 1.75em;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li:before {
+	content: "•";
+	padding: 0 0.5em;
+	color: rgb(67,138,45);
+}
+
+.sousitems li:before {
+	content: "•";
+	padding: 0 0.5em;
+	color: rgb(50, 113, 169);
+}
+
+/*Contact */
+.siege, .coordonnees,  .mentions {
+	background-color: white;
+	color: rgb(54, 104,  46);
+	text-align: center;
+	width: 100%;
+	float: left;
+    border-top: 1pt solid black;
+	height: auto;
+	padding: 4%;
+}
+
+.mentions a {
+	color: rgb(67,138,45);
+}
+
+.mentions a:hover{
+	font-weight: bolder;
+}
+
+.boutonContact { 
+    display: none;	
+}
+
+
+/*Formulaire*/
+#formuTitre {
+	font-size: 0.89em;
+	color: purple;
+	font-weight: bolder;
+	margin: 10% 0 5% 0;
+}
+
+#formuContact{
+	padding: 3%;
+	width: 92%;
+}
+
+#formuIdentite label, #formuCoordonnees label, #formuMessage label {
+	color: white;
+	background-color: rgb(67,138,45);
+	display: inline-block;
+	text-align: center;
+	width: 37%;
+	padding: 1%;
+	border-radius: 4px;	
+	float: left;
+	clear: left;
+	position: relative;
+	top: 0.5em;
+}
+
+
+#formuIdentite input, #formuCoordonnees input, #formuMessage textarea {
+	display: inline-block;
+	float: right;
+	width: 51%;
+}
+
+#formulaire input, #formulaire textarea {
+	color: black;
+	background-color: white;
+	padding: 1.5%;
+	margin:  0 .75%;
+}
+
+#formulaire textarea {
+	position: relative;
+	top: 1em;
+	margin-bottom: 1em;
+}
+
+#formuSubmit input {
+	color: white;
+	background-color: rgb(67,138,45);
+	border-radius: 24px;
+	text-align: center;
+	display: inline-block;
+	width: 65%;
+	margin: 4% 17.5%;
+	border: 1pt solid white;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#formuSubmit input:hover {
+	background-color: white;
+	color: rgb(67,138,45);
+	border-radius: 24px;
+}
+
+#formuIdentite, #formuCoordonnees, #formuMessage, #formuSubmit {
+	padding: 0 5% 0 5%;
+}
+
+a:hover {
+color: rgb(67,138,45);
+}
+
+/*Formulaire erreurs*/
+span[id^="errdiv_"] {
+	font-weight: bold; 
+	color: purple; 
+	font-size: 1em; 
+	display: none;
+	margin-left: 2%;
+	}
+}
+
+@media screen and (min-width:541px) and (max-width:768px) {
+/*Bandeau - contact*/
+#header  {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; 
+  padding: none;
+  height: 10%;
+}
+
+.contactBandeau {
+	border: 1pt solid rgb(67,138,45);
+	border-radius: 24px;
+	background-color: rgb(67,138,45);
+    color: white;
+	font-size: 1em;
+    float: right;
+	margin: 2% 3%;
+	height: 2em;
+	text-align: center;
+}
+
+.contactBandeau:hover{
+	color: rgb(67,138,45);
+    background-color: white;
+}
+
+#couverture{
+	padding-top: 4em;
+}
+
+/* Menu et Rubriques */
+#menu {
+	width: 100%;
+	display: inline-block;
+}
+
+#menu h1 {
+    text-align: center;
+}
+
+.rubs {
+	text-align: center;
+	width: 50%;
+	flex: none;
+}
+
+.pt1:nth-child(2){
+	border-bottom: 1pt solid rgb(67,138,45) ;
+	border-right: none;
+	border-left: none;
+}
+
+.pt2 {
+	float: right;
+	border-left: 1pt solid rgb(67,138,45);
+	height: 29.25em;
+}
+
+
+.items { 
+	color: black;
+	text-align: left;
+	list-style-type: none;
+	line-height: 1.75em;
+}
+
+.items ul {
+	list-style-type: none;
+}
+
+li:before {
+	content: "•";
+	padding: 0 0.5em;
+	color: rgb(67,138,45);
+}
+
+.sousitems li:before {
+	content: "•";
+	padding: 0 0.5em;
+	color: rgb(50, 113, 169);
+}
+
+.siege, .coordonnees { 
+	padding: 2%;
+	color: white;
+	text-align: left;
+	line-height: 0.5em;
+	height: 12em;
+	width: 31%;
+	float: left;
+	background-color: rgb(67,138,45);
+    display: inline-block;	
+}
+
+.mentions{ 
+	padding: 2%;
+	color: white;
+	text-align: left;
+	line-height: 0.5em;
+	height: 12em;
+	width: 26%;
+	float: left;
+	background-color: rgb(67,138,45);
+    display: inline-block;	
+}
+
+.boutonContact { 
+    display: none;
+}
+
+/*Formulaire*/
+#formuTitre {
+	font-size: 0.89em;
+	color: purple;
+	font-weight: bolder;
+	margin: 10% 0 5% 0;
+}
+
+#formuContact{
+	padding: 3%;
+	width: 92%;
+}
+
+#formuIdentite label, #formuCoordonnees label, #formuMessage label {
+	color: white;
+	background-color: rgb(67,138,45);
+	display: inline-block;
+	text-align: center;
+	width: 37%;
+	padding: 1%;
+	border-radius: 4px;	
+	float: left;
+	clear: left;
+	position: relative;
+	top: 0.5em;
+}
+
+
+#formuIdentite input, #formuCoordonnees input, #formuMessage textarea {
+	display: inline-block;
+	float: right;
+	width: 51%;
+}
+
+#formulaire input, #formulaire textarea {
+	color: black;
+	background-color: white;
+	padding: 1.15%;
+	margin:  0 .75%;
+}
+
+#formulaire textarea {
+	position: relative;
+	top: 1em;
+	margin-bottom: 1em;
+}
+
+#formuSubmit input {
+	color: white;
+	background-color: rgb(67,138,45);
+	border-radius: 24px;
+	text-align: center;
+	display: inline-block;
+	width: 65%;
+	margin: 4% 17.5%;
+	border: 1pt solid white;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#formuSubmit input:hover {
+	background-color: white;
+	color: rgb(67,138,45);
+	border-radius: 24px;
+}
+
+#formuIdentite, #formuCoordonnees, #formuMessage, #formuSubmit {
+	padding: 0 5% 0 5%;
+}
+
+a:hover {
+color: rgb(67,138,45);
+}
+
+/*Formulaire erreurs*/
+span[id^="errdiv_"] {
+	font-weight: bold; 
+	color: purple; 
+	font-size: 1.2em; 
+	display: none;
+	margin-left: 35%;
+	}
+}

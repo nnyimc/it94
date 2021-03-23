@@ -1,0 +1,292 @@
+html, body {
+	font-family: "Open Sans", Helvetica, serif;
+	box-sizing: border-box;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	overflow-x: hidden;
+	background-color: lavender;
+}
+
+/* Styles des liens */
+a:link {
+	text-decoration: none;
+	color: purple;
+}
+
+a:visited {
+	text-decoration: none;
+	color : grey;
+}
+
+a:hover {
+     text-decoration: none;
+	 color: rgb(67,138,45);
+}
+
+a:active {
+	text-decoration: none;
+	color: black;
+}
+
+/* Bandeau - logo - contact */
+#header {
+	position: fixed;
+	width: 100%;
+	background-color: lavender;
+	top: 0;
+	left: 0;
+	z-index:1;
+}
+
+
+#bandeau a {
+	padding-left: 3%;
+}
+
+
+#logo {
+	display: inline;
+	height: 3.2em;
+	width: 8em;
+}
+
+/* Formulaire authentification*/
+#auth {
+	margin: 35%;
+	width: 30%;
+	position: relative;
+	bottom: 20em;
+	background: rgba(67,18,45, 55%);
+	border-radius: 8px;
+}
+
+#auth label {
+	margin: 0 25%;
+	background-color: rgba(255,255,255,80%);
+	color: rgb(67,138,45);
+	padding: .25% .75%;
+}
+
+#ident, #mdp {
+	margin: 0 25%;
+	border: 1pt solid lavender;
+	padding: .25% .75%;
+}
+
+#authSubmit {
+	color: white;
+	background-color: rgb(67,138,45);
+	border: 1pt solid lavender;
+	border-radius: 32px;
+	font-size: 1em;
+	text-align: center;
+	margin-left: 42%;
+
+}
+
+#authSubmit:hover{
+	color: rgb(67,138, 45);
+	background-color: white;
+	border: 1pt solid orangered;
+	border-radius: 32px;
+	font-size: 1em;
+	margin-left: 42%;
+	text-align: center;
+	
+}
+
+
+span[id^="errdiv_"] {
+	font-weight: bold; 
+	color: purple; 
+	background-color: rgba(255,255,255,80%);
+	font-size: 1.2em; 
+	margin-left: 32%;
+}
+
+/*Formulaire composition */
+
+#compo {
+	margin: 8% 15% 2% 15%;
+	padding: 3%;
+	width: 70%;
+	background: rgba(67,118,145, 85%);
+	border-radius: 8px;
+}
+
+#compo label {
+	margin: .25em 25%;
+	background-color: rgba(255,255,255,80%);
+	display: inline-block;
+	color: rgb(67,138,45);
+	padding: .25% .75%;
+	clear: both;
+}
+
+#photo {
+	background-color: white;
+}
+
+.ajouter {
+	background-color: lavender;
+	
+}
+
+.ajouter:hover {
+	background-color: rgb(119, 177, 252);
+	
+}
+
+#compo input, textarea {
+	margin:  0 25%;
+	border: 1pt solid orangered;
+	padding: .25% .75%;
+}
+
+#compoSubmit {
+	color: white;
+	background-color: rgb(67,138,45);
+	border: 1pt solid orangered;
+	border-radius: 32px;
+	font-size: 1em;
+	text-align: center;
+	width: 6em;
+}
+
+#compoSubmit:hover{
+	color: rgb(67,138, 45);
+	background-color: white;
+	border: 1pt solid lavender;
+	border-radius: 32px;
+	font-size: 1em;
+	text-align: center;
+	width: 6em;
+}
+
+.membres {
+	color: purple;
+	font-size: 1.5em;
+	margin: 0 22%;
+	position: relative;
+	bottom: 0.75em;
+}
+
+.membres .restricted {
+	color: orangered;
+}
+
+#membres {
+    color: purple;
+	font-size: 1.5em;
+	margin: 0 22%;
+	display: inline-block;
+	position: relative;
+	bottom: 0.75em;
+}
+
+#main {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+
+/* Flex qui permettent à l'image de s'aligner sur le bas de la div */
+#couverture {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; 
+
+  margin-top: 8%;		  
+}
+
+
+/* MEDIA QUERIES*/
+
+@media screen and (min-width: 0px) and (max-width: 319px) {
+	
+/*Bandeau*/
+
+#logo {
+	display: none;
+ }
+
+#couverture img {
+    display: none;
+ }
+
+#couverture {
+	height: 6em;
+ }
+
+#auth {
+	display:none;
+ }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 540px) {
+/*Bandeau*/
+#logo, .lienlogo {
+	display: none;
+ }
+
+#bandeau {
+	padding: 0 29%;
+ }
+}
+
+
+@media screen and (min-width:541px) and (max-width:768px) {
+/*Bandeau - contact*/
+#header  {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+            -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; 
+  padding: none;
+ }
+
+#auth {
+	margin: 10% 25%;
+	width: 50%;
+	position: relative;
+	bottom: 15.18em;
+  }
+
+#auth label {
+	margin-left: 12%;
+	background-color: rgba(255,255,255,80%);
+	color: rgb(67,138,45);
+	padding: .25% .75%;
+  }
+
+#auth input {
+	margin-left: 12%;
+	border: 1pt solid lavender;
+	padding: .25% .75%;
+  }
+
+#authSubmit input {
+	margin-left: 35%;
+	
+ }
+
+#authSubmit:hover{
+	margin-left: 35%;
+	
+  }
+  
+}

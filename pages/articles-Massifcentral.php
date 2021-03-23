@@ -1,0 +1,19 @@
+<?php 
+
+                          include('../includes/_inclEntete-article.php'); 
+                       	   echo  '<div id=article_auto>';
+						   echo  '<h1>Massif central</h1>';
+						   echo  '<h2>Le Massif central, Massiu centrau en occitan, est un massif hercynien qui occupe le centre-sud de la France. Avec une surface de 85 000 km2, c\'est le massif le plus vaste du territoire. C\'est aussi un massif &acirc;g&eacute; (globalement form&eacute; il y a 500 millions d\'ann&eacute;es), d\'altitude moyenne, aux reliefs ar</h2>';
+						   echo  '<img src=../uploads/1533418715671.jpg />';
+						   echo  '<p>Les trois grandes agglom&eacute;rations du Massif central, situ&eacute;es dans sa moiti&eacute; nord, sont Clermont-Ferrand (150 000 habitants), Limoges (130 000 habitants) et Saint-&Eacute;tienne (175 000 habitants). Cette derni&egrave;re est la plus grande agglom&eacute;ration du massif. Les autres villes importantes du massif sont Aurillac, Brive-la-Gaillarde, Cahors, Gu&eacute;ret, Mende, Millau, Montlu&ccedil;on, Moulins, Le Puy-en-Velay, Roanne, Rodez, Thiers et Vichy. </p>';
+						   echo  '<p>Onze d&eacute;partements sont situ&eacute;s enti&egrave;rement dans le massif1 : l\'Aveyron, la Loz&egrave;re, le Cantal, la Haute-Loire, le Puy-de-D&ocirc;me, l\'Allier, la Loire, la Creuse, la Haute-Vienne, la Corr&egrave;ze, le Lot. Le terme actuel de Massif central est r&eacute;cent. La notion appara&icirc;t d&egrave;s 1841 sur les cartes g&eacute;ologiques de Pierre-Armand Dufr&eacute;noy et &Eacute;lie de Beaumont. C\'est le g&eacute;ographe et auteur de cartes murales scolaires Paul Vidal de La Blache qui baptise en 1903 Massif central ce &laquo; groupe de hautes terres &raquo;.
+
+Cette appellation savante et celle de Plateau central ne correspondent donc ni &agrave; une vieille province comme l&rsquo;Auvergne, les C&eacute;vennes ou le Limousin3, ni &agrave; des d&eacute;nominations r&eacute;ellement populaires. Les g&eacute;ographes du d&eacute;but du XXe si&egrave;cle, p&eacute;tris d&rsquo;histoire et de &laquo; sciences naturelles &raquo;, ont fini par les imposer, multipliant les images &agrave; destination du public (le &laquo; ch&acirc;teau d&rsquo;eau de la France &raquo;, sa &laquo; t&ecirc;te chauve &raquo; fortement d&eacute;bois&eacute;e, son &laquo; p&ocirc;le r&eacute;pulsif &raquo; &eacute;parpillant ses &eacute;migrants vers les plaines riches).</p>';
+						   echo  '<p>M&ecirc;me si ce territoire n&rsquo;offre gu&egrave;re d&rsquo;unit&eacute; humaine et demeure tiraill&eacute; entre influences diverses, parfois oppos&eacute;es, ces divers vocables ont &eacute;t&eacute; repris par des entreprises, des banques, des coop&eacute;ratives agricoles ou des administrations. Parall&egrave;lement, d&egrave;s la fin du XIXe si&egrave;cle, des associations ou amicales originaires du massif se sont constitu&eacute;es, d&rsquo;abord &agrave; Paris, puis dans toute la France ; en se r&eacute;clamant des hautes terres, elles ont renforc&eacute; leur identit&eacute;. </p>';
+						   echo  '<p>Pour autant, le massif n&rsquo;a jamais constitu&eacute; un tout politique, d&rsquo;o&ugrave; les pr&eacute;cautions des historiens tardant &agrave; lui accorder une attention sp&eacute;cifique, malgr&eacute; les vieilles tentatives de la conf&eacute;d&eacute;ration arverne et la puissance &eacute;vocatrice de cette image d&rsquo;une &laquo; forteresse &raquo; strat&eacute;gique au c&oelig;ur de l&rsquo;unit&eacute; nationale. Unit&eacute; administrative et unit&eacute; &eacute;conomique lui ont toujours fait d&eacute;faut. Tout au plus la litt&eacute;rature touristique a tent&eacute; de populariser ces moyennes montagnes.
+</p>';
+						   echo  '<p>auteur: Wiki</p>';
+						   echo  '<p>mots-clés: <span><a href=\'../pages/articles-Massifcentral.php\'>Limoges</a></span></p>';
+						   echo  '</div>';
+						   include('../includes/_inclPied-article.php');
+					  ?>

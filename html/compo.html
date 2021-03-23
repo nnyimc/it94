@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+  <html>
+   <head>
+     <title> Insert-Tech94 | Composition </title>
+   </head>
+   <body>
+	<form id='compo' action='compo.php' method='POST' enctype='multipart/form-data'>
+	
+	  <p><label for='titre'>Titre</label></p>
+	  <input type='text' id='titre' name='titre' />
+	  
+	  <p><label for='chapeau'>Chapeau</label></p>
+	  <textarea rows='3' cols='50' id='chapeau' name='titre'></textarea>
+	  
+	  <p><label for='photo'> Photo </label></p>
+	  <input type='file' id='photo' name='photo' />
+      <input class='ajouter' type='button' name='ajoutPhoto' value='Ajouter'/>
+		
+	  <p><label for ='parag1'> Paragraphe 1 </label></p>
+	  <textarea  rows='6' cols='50' id='parag1' name='parag1'></textarea>
+	  <input class='ajouter' type='button' name='ajoutParag' value='Ajouter' />
+		
+	  <p><label for ='motsCles'> Mots Clés </label></p>
+	  <textarea  rows='6' cols='50' id='motsCles' name='motsCles'></textarea>
+	  
+	  <p><label for='auteur'> Auteur </label></p>
+	  <input type ='text' id='auteur' name='auteur' />
+	  
+	  <p><input type='submit' value='Publier' id='compoSubmit' name='publication' />
+	</body>
+</html>
